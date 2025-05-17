@@ -1,0 +1,26 @@
+name: Publish CV PDF en GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v3
+
+      - name: Generar el PDF
+        run: |
+          mkdir -p docs
+          echo "Content PDF" > docs/RafaelCV.pdf
+
+      - name: Commit And push del PDF
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add docs/RafaelCV.pdf
+          git commit -m "Add Pdf" || echo "Null"
+          git push origin main
