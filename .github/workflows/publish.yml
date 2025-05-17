@@ -12,11 +12,6 @@ jobs:
       - name: Checkout del repositorio
         uses: actions/checkout@v3
 
-      - name: Copy PDF
-        run: |
-          mkdir -p docs
-          cp RafaelCV.pdf docs/RafaelCV.pdf
-
       - name: Commit And Push
         run: |
           git config user.name "github-actions"
