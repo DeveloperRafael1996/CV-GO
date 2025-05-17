@@ -1,4 +1,4 @@
-name: Publicar PDF real en GitHub Pages
+name: Push PDF RafaelCV
 
 on:
   push:
