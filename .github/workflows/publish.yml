@@ -18,4 +18,4 @@ jobs:
           git config user.email "github-actions@github.com"
           git add docs/RafaelCV.pdf
           git commit -m "Publish PDF" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/DeveloperRafael1996/CV-GO.git HEAD:main
+          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/DeveloperRafael1996/profile.git HEAD:main
